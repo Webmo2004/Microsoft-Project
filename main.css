@@ -1,9 +1,25 @@
-*{
-  box-sizing: border-box;
+html{
+  scroll-behavior: smooth;
 }
 
+/* Page normaliz  */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Start styling ----------  */
+
+button{
+  border: none;
+  background-color: transparent;
+}
+
+/* main content ----------- */
+
 main{
-  font-family:  'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0px 5px;
   position: relative;
 }
@@ -59,6 +75,8 @@ main .top_content figcaption{
   border-radius: 3px;
   cursor: pointer;
 }
+
+/* middle content ------------ */
 
 .middle_content{
   display: grid;
@@ -152,6 +170,8 @@ article button:hover::after{
 article button:hover::before{
   right: -13px;
 }
+
+/* lower_content ---------------  */
 
 .lower_content{
   padding: 50px 70px;
@@ -267,16 +287,9 @@ article button:hover::before{
   transition: .2s ease-in-out;
 }
 
-.card-1 button{
-  width: 110px;
-}
-
-.card-2 button{
-  width: 250px;
-}
-
-.card-3 button{
-  width: 270px;
+.top_bottom_lower_content .wrap button{
+  max-width: 430px;
+  min-width: 110px;
 }
 
 .wrap button:hover::after{
@@ -310,6 +323,7 @@ article button:hover::before{
   margin-right: 15px;
   font-size: 22px;
   cursor: pointer;
+  color: black;
 }
 
 .back_to_top{
@@ -323,6 +337,28 @@ article button:hover::before{
   cursor: pointer;
 }
 
+/* media quiry (Resposive_codes)  */
+@media (max-width:1385px){
+  .top_lower_content .top_lower_content_description{
+    left: 60px;
+  }
+  .top_lower_content .top_lower_content_description h2{
+    max-width: 350px;
+    min-width: 150px;
+  }
+  .buttons,
+  .card-2 button,
+  .card-3 button{
+    flex-direction: column;
+    width: 200px;
+    justify-content: flex-start;
+  }
+  .wrap button::after,
+  .wrap button::before{
+    display: none;
+  }
+}
+
 @media (max-width:1024px){
   .middle_content{
     padding: 0px 20px;
@@ -332,42 +368,46 @@ article button:hover::before{
     gap: 20px;
     height: 1000px;
   }
-  .middle_content .pc , .microsoft_edge{
+  .middle_content article{
     margin-bottom: 40px;
   }
   .top_lower_content{
-    justify-content: center;
-    align-items: flex-start;
+    min-height: 700px;
   }
   .lower_content{
     padding: 50px 10px;
   }
   .top_lower_content_description{
-    background-color: white;
-    top: 375px;
+    top: 100px;
     left: 0px;
-    padding-left: 60px;
+    padding-left: 0px;
   }
   .top_lower_content_description h2{
-    font-size: 25px;
+    font-size: 35px;
   }
   .bottom_lower_content{
     margin-top: 150px;
   }
+  .bottom_lower_content h1{
+    margin-top: 100px;
+  }
   .buttons {
     width:300px ;
   }
-  figcaption .text_head{
-    font-size: 60px;
-    width: 400px;
+  .main_content .top_content figcaption{
+    top: 90px;
+    left: 50px;
   }
   .top_bottom_lower_content{
     grid-template-columns: repeat(2,1fr);
   }
+  .back_to_top{
+    bottom: 650px;
+  }
 }
 
 
-@media (max-width:450px){
+@media (max-width:690px){
   .middle_content{
     grid-template-columns: repeat(1,1fr);
     gap: 20px;
@@ -375,7 +415,6 @@ article button:hover::before{
   }
   .top_bottom_lower_content{
     grid-template-columns: repeat(1,1fr);
-    gap: px;
   }
   .middle_content{
     height: fit-content;
@@ -396,15 +435,16 @@ article button:hover::before{
   .main_text{
     width: 300px;
   }
-}
-
-@media (max-width:1385px){
-  .buttons,
-  .card-2 button,
-  .card-3 button{
-    flex-direction: column;
+  .top_lower_content .top_lower_content_description h2{
     width: 200px;
-    justify-content: flex-start;
+    font-size: 20px;
+  }
+  .top_lower_content_description p{
+    width: 200px;
+  }
+  .top_lower_content .top_lower_content_description{
+    padding-left: 0;
+    left: 20px;
   }
 }
 
