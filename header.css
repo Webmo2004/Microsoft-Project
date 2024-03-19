@@ -26,6 +26,7 @@ nav{
 .logo{
   width: 125px;
   padding-left: 10px;
+  flex: 1;
 }
 
 .logo p{
@@ -144,6 +145,7 @@ a{
 
 .right_section a[title="search"]{
   position: relative;
+  margin: 0px 20px;
 }
 
 .right_section a[title="search"]::after{
@@ -179,13 +181,14 @@ a:hover::after{
   margin-left: 10px;
 }
 
-button{
+.right_section button{
   border: none;
   outline: none;
   background-color: transparent;
   display: flex;
   align-items: center;
-  width: 100px;
+  max-width: 100px;
+  min-width: none;
 }
 
 .search_icon i{
@@ -231,6 +234,9 @@ button{
   nav .left_section{
     display: none;
   }
+  nav .left_section_wrapper .logo img{
+    width: 20px;
+  }
   nav a[title="microsoft_tools"],
   nav a[title="search"],
   nav .search_icon i,
@@ -238,7 +244,11 @@ button{
   nav .microsoft_tools::before{
     display: none;
   }
-  body{
-    width: 130;
+}
+
+@media (min-width:100px){
+  .right_section .profil_icon{
+    width: 100px;
   }
 }
+
