@@ -35,4 +35,7 @@ footer .footer_upper_content li{
   footer .footer_upper_content{
     grid-template-columns: 1fr  ;
   }
+  footer{
+    padding-left: 0 ;
+  }
 }
